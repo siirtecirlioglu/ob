@@ -1,0 +1,55 @@
+<div class="orderbook-table">
+
+    <div class="orderbook-table__container"
+        *ngIf="(orderbookData$ | async) as orderbookData; else loading">
+        
+        <!-- TODO This can be a component on its own and perhaps this component can be better named -->
+        <div class="orderbook-table--asks">
+            <h2 class="orderbook-table__header">
+                Asks
+            </h2>
+            <div class="orderbook-table__table">
+                <table>
+                    <tr class="orderbook-table__table-header">
+                        <th>Price</th>
+                        <th>Size</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr class="orderbook-table__table-values"
+                        *ngFor="let ask of orderbookData.asks">
+                        <td>{{ask.price}}</td>
+                        <td>{{ask.size}}</td>
+                        <td>{{ask.total}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="orderbook-table--bids">
+            <h2 class="orderbook-table__header">
+                Bids
+            </h2>
+            <div class="orderbook-table__table">
+                <table>
+                    <tr class="orderbook-table__table-header">
+                        <th>Price</th>
+                        <th>Size</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr class="orderbook-table__table-values"
+                        *ngFor="let bid of orderbookData.bids">
+                        <td>{{bid.price}}</td>
+                        <td>{{bid.size}}</td>
+                        <td>{{bid.total}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <ng-template #loading>
+        Loading...
+    </ng-template>
+</div>

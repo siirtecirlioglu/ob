@@ -1,0 +1,59 @@
+.orderbook-table {
+
+    &--asks {
+
+    }
+
+    &--bids {
+    }
+
+    &--asks, &--bids {
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin: 2rem;
+    }
+
+    &__header {
+        background-color: #254942;
+        color: #fff;
+        padding: 0.5rem;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin: 0;
+    }
+
+    &__table {
+
+        border: 1px solid #254942;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        &-header {
+
+            & > th {
+                background-color: #BAA6B1;
+                color: #fff;
+            }
+
+        }
+
+        &-values {
+            
+            & > td {
+                min-width: 5rem;
+                width: 8rem;
+                text-align: right;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,35 @@
+.app {
+
+    &-header {
+        display: flex;
+        gap: 1rem;
+        align-items: baseline;
+        background-color: #53424C;
+        color: #BAA6B1;
+        font-size: 2rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+
+        &--title {
+        }
+
+        &--details {
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-left: #BAA6B1 1px solid;
+            padding-left: 0.3rem;
+        }
+
+    }
+
+    &-footer {
+        height: 3rem;
+        background-color: #BAA6B1;
+        color: #fff;
+        padding: 1rem;
+    }
+
+    &-copyright {
+    }
+
+}
